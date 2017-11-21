@@ -12,14 +12,22 @@ describe('Thermostat', function(){
   });
 
   it('increase the temperature', function() {
-    thermostat.up();
+    thermostat.up(1);
     expect(thermostat.temperature()).toEqual(21);
   });
 
   it('increase the temperature', function() {
-    thermostat.down();
+    thermostat.down(1);
     expect(thermostat.temperature()).toEqual(19);
   });
 
+  it('have a default power saving on', function(){
+    expect(thermostat.powerSavingOn()).toBeTruthy()
+  })
+
+  it('switch power saving mode', function(){
+    thermostat.modeSwitch();
+    expect(thermostat.powerSavingOn()).toBeFalsy()
+  })
 
 });
