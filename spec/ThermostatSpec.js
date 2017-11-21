@@ -11,6 +11,10 @@ describe('Thermostat', function(){
     expect(thermostat.temperature()).toEqual(20);
   });
 
+  it('minimum temperature 20', function(){
+    expect(thermostat.minTemperature()).toEqual(10);
+  });
+
   it('increase the temperature', function() {
     thermostat.up(1);
     expect(thermostat.temperature()).toEqual(21);
@@ -29,5 +33,7 @@ describe('Thermostat', function(){
     thermostat.modeSwitch();
     expect(thermostat.powerSavingOn()).toBeFalsy()
   })
+
+
 
 });
