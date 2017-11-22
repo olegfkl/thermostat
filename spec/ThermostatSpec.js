@@ -58,4 +58,15 @@ describe('Thermostat', function(){
     expect(thermostat._temperature).toEqual(32);
   });
 
+  it('cannot lower the temp less than the min temperature set', function() {
+    thermostat._temperature = 10;
+    thermostat.down();
+    expect(thermostat._temperature).toEqual(10);
+  });
+
+  it('resets temperature', function(){
+    thermostat.reset();
+    expect(thermostat._temperature).toEqual(20);
+  });
+
 });

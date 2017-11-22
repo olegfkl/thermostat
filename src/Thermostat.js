@@ -22,6 +22,9 @@ Thermostat.prototype.up = function () {
 };
 
 Thermostat.prototype.down = function () {
+  if (this._temperature === this._minTemperature) {
+    return this._temperature
+  };
   this._temperature -= 1 ;
 };
 Thermostat.prototype.powerSavingOn = function(){
@@ -34,5 +37,9 @@ Thermostat.prototype.modeSwitch = function () {
      this._maxTemperature = 25;
   } else {
     this._maxTemperature = 32;
+  };
+
+  Thermostat.prototype.reset = function () {
+    this._temperature = 20;
   };
 };
