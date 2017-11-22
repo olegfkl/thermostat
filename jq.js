@@ -21,10 +21,12 @@ $(document).ready(function() {
 
   });
 
+  $("#power").on("click", function(){
+    $("#power").html(thermostat.modeSwitch());
+    $("pow").css("background-color", "pink");
+    $("#temp").html(thermostat.temperature());
+  });
+
 
 
 });
-
-
-// $("header").on("click", function () {
-// })

@@ -16,14 +16,14 @@ Thermostat.prototype.minTemperature = function () {
 };
 Thermostat.prototype.up = function () {
   if (this._temperature === this._maxTemperature) {
-  return this._temperature };
+  return  };
   this._temperature += 1 ;
 
 };
 
 Thermostat.prototype.down = function () {
   if (this._temperature === this._minTemperature) {
-    return this._temperature
+    return
   };
   this._temperature -= 1 ;
 };

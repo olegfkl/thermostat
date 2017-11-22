@@ -65,7 +65,7 @@ describe('Thermostat', function(){
   });
 
   it('resets temperature', function(){
-    thermostat.resetTemp();
+    thermostat.reset();
     expect(thermostat._temperature).toEqual(20);
   });
 
