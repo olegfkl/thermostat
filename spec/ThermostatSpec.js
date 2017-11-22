@@ -34,6 +34,23 @@ describe('Thermostat', function(){
     expect(thermostat.powerSavingOn()).toBeFalsy()
   })
 
+  it('Switching power saving mode to off sets max temprature to 32', function(){
+    thermostat.modeSwitch();
+    expect(thermostat._maxTemperature).toEqual(32);
+  });
+
+  it('Switching power saving from on to off sets max temprature to 25', function(){
+    thermostat.modeSwitch();
+    thermostat.modeSwitch();
+    expect(thermostat._maxTemperature).toEqual(25);
+  });
+
+  it("Cannot increate more than a max temperature of power mode on", function(){
+    thermostat._temperature = 25
+    thermostat.up();
+    expect(thermostat._temperature).toEqual(25);
+  });
+
 
 
 });
