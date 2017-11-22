@@ -13,12 +13,12 @@ Thermostat.prototype.temperature = function () {
 Thermostat.prototype.minTemperature = function () {
   return this._minTemperature;
 };
-Thermostat.prototype.up = function (number) {
-  this._temperature += number ;
+Thermostat.prototype.up = function () {
+  this._temperature += 1 ;
 };
 
-Thermostat.prototype.down = function (number) {
-  this._temperature -= number ;
+Thermostat.prototype.down = function () {
+  this._temperature -= 1 ;
 };
 Thermostat.prototype.powerSavingOn = function(){
   return this._powerSaving;
