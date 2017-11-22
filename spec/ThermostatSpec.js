@@ -51,6 +51,11 @@ describe('Thermostat', function(){
     expect(thermostat._temperature).toEqual(25);
   });
 
-
+  it("Cannot increate more than a max temperature of power mode off", function(){
+    thermostat._temperature = 32
+    thermostat.modeSwitch();
+    thermostat.up();
+    expect(thermostat._temperature).toEqual(32);
+  });
 
 });
