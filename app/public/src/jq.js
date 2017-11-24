@@ -18,9 +18,6 @@ $.get(url + metric + token, function(data) {
 });
 };
 
-
-
-
 function sessionSave() {
   $.post('/save', { temperature: thermostat.temperature() });
 };
@@ -29,25 +26,12 @@ function sessionGet() {
   $.get('/update', function(temp){
     console.log(thermostat._temperature);
     if (temp.temperature === null) {
-        update();
     } else {
-        thermostat._temperature = temp.temperature ;
-        update();
+        thermostat._temperature = Number(temp.temperature) ;
     }
-      console.log(thermostat._temperature);
-
-      console.log(thermostat._temperature);
+      update();
   });
 }
-
-
-
- // function session() {
- //  $.post('/save', { temperature: thermostat.temperature() } )
- //  };
-    // console.log( { temperature: update() })
-
-
 
 $('#select-city').submit(function(event) {
   event.preventDefault();
