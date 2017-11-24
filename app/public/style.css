@@ -1,0 +1,73 @@
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  h1 {
+    font-size: 70px;
+    font-family: Futura;
+    color: #E68625;
+    position:absolute;
+    top: 52%;
+    left: 31%;
+  }
+
+h4{
+  font-size: 70px;
+  font-family: Futura;
+  position:absolute;
+  top: 5%;
+  left: 59%;
+}
+.number {
+  font-family: Futura;
+  font-size: 200px;
+  position:absolute;
+  top: 15%;
+  left: 39%;
+}
+
+.saveon {
+  background-color: #66D8D8;
+  border: none;
+  padding: 15px 30px;
+  position:absolute;
+  top: 80%;
+  left: 32%;
+  font-family: "Futura",serif;
+}
+
+.plus {
+  background-color: #38CB6B;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position:absolute;
+  top: 80%;
+  left: 45%;
+  font-family: "Futura",serif;
+}
+
+.minus {
+  background-color: #E15127;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position:absolute;
+  top: 80%;
+  left: 52%;
+  font-family: "Futura",serif;
+}
+
+.reset {
+  background-color: #66D8D8;
+  border: none;
+  padding: 15px 52px;
+  position:absolute;
+  text-align: center;
+  top: 80%;
+  left: 58%;
+  font-family: "Futura",serif;
+}
