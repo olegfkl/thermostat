@@ -1,7 +1,33 @@
 $(document).ready(function() {
 
+
+
+
  var thermostat = new Thermostat();
+
  update();
+
+
+function displayWeather(city) {
+var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city ;
+var token = '&APPID=39f7158b4fbdeec4940041d9e1480b55' ;
+var metric = '&units=metric';
+$.get(url + metric + token, function(data) {
+  $('#api').html(data.main.temp);
+});
+};
+
+
+
+$('#select-city').submit(function(event) {
+  event.preventDefault();
+  if ( $('#current-city').val() === '') {
+    var city = 'London'
+  } else {
+    var city = $('#current-city').val();
+  }
+  displayWeather(city);
+ });
 
  $('#plus').on('click', function() {
    thermostat.up();
